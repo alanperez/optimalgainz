@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "optimal-gainz-366920",
+  "private_key_id": "f84e89172633167c3881bde453f17aa6681ad4af",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC/JlgliTn2Bevy\n3PB8e4zS2/jpzsabhhHPtYeEz7EIS/eobd770SIU7shd4WCfNs6+P2nXJ7KEp1ng\nC6qmBZvmG0DAa95xyY5+VI+cTHOZFQfGgXjgkahy6jJhHb1w3nNRKYLuCaw5ns2v\nVL7iX3NJIvdj2SLQ38vOcm1+5wimsUcV6+L/Itm6DEz4Eo/LK/IOgdHXN3X5sS2D\nNYRQULSYgVxGZQazRollUnCgjY+y/R3eckNUmVPRF2m3vFhpsnoIILaWoTUitUnA\nklZ0Lp0JtfEZqc3eoVBa5OqYaAHlHlGb2RqU3sWyGCGJd5H03LmQbRC/00HrJLWN\nSNe4YG4jAgMBAAECggEAX4/P6ZQdQf3b4+LI57LsyE3otxsE96OjK/BY+/DJVJiG\nC9JB9Cqtm0F1MloGcBJ6cWpKg6H5AZCYwgWTHsUXF4bwbEKBRum5LzcfRMiD0jhN\nVtRLlhm72Rd0cFDp8I+Fn0HdjxuO2o+lzM3VUF7fx+SPQX/AhCQeQ+u5CgR+srZ4\nNdzhse5VJNFTvLueaEsgFOH306ekvcg3avAjQbPXk9+usdr+5UN/z9bThqbWDL4A\neyHy6fQG/wt3a/omcES2fQceVBSLXo681bgeRcJuCNd8SYNhDz9KZXZUjzB4dlFW\nSwz8wLO6EONGJmjGCntKJ6HMF9Uuj+wTdVQlPDXzIQKBgQDvDQycSAhW6AkNQUUi\nE/aUaslAjdFqI3kMIOjzwGK93tOxn589is+pH+mpeV1GdXyQ+z0kR5flINq/G8sD\n0vTwjrvoe28N9kJvrhRqrzi1hXSyCdbSlT48uB4nIsY1BfqXqF31GoobFGArRILL\nLwVB8ZxT8XYN++H9EFij/J6FVQKBgQDMs9pvcsBR2i6P9TCqiUjdf7NXtFpyrpT5\n4sF303ngiY2kg4FNhBTzD1HPtH/6U+EldbTW8vK8VITf7rjF/XJxnSq1lAgu9nzz\nmmBC2+03qDdUfn8bhSQ+YptODuyH52hi3/v55ZcPJ6GXfqC7PviXYfbujKiZgDn5\ndCi4XzCllwKBgFRrX1Cxf4BxYQD1U9y9AA9ZxsitTI8XB+Bontu1zSkQT+IiZLHv\nG3a2dmYLHg2L3/mzP9xYDCQ2fgmPXxpynV12ipWHQajElqGp8DvctUIlZxiYsOyd\nF+WJf9yCQ0zmV6DHLKcqQCtf/rZI84edi1XGZVafpvk5Qo2EAEmpJLIhAoGAFxkY\nRckaAGJxLJdLJYMWMMAvGW9lYVlnwAahNAct0nNTA0Q/e+KyhnatEZXZdwKt/g8Z\nF8QUNcIHuEj0moqttjo4zoJkpf/0O3yo7gJo8wXNMICRkSZl35A63AT9FZy7/6Qs\nh5crg29CYZjNRDOn01Ufiu1ePOvmHsrHqX48PAMCgYAzkIszUCY1fH1eCBkzaz3h\nDVLL7weeEsD/FK6sdnoOlimXAB5Z+NKNTtYFKctSCI8ein2dmzvd2z6/aE7Nq7Oi\nLj1jM+mqO1cMxnUkKdeTTyvTZRsrMjZgBwELF3w/Ymhl3xCiKerVMAQDY76WlnJR\nZaHPpN2ApvRRQo+gMvPMPg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "abrarzaman@optimal-gainz-366920.iam.gserviceaccount.com",
+  "client_id": "105078452811835235846",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/abrarzaman%40optimal-gainz-366920.iam.gserviceaccount.com"
+}
