@@ -54,6 +54,11 @@ async function makeUser(email, password, retypedPassword, age,bodyweight,heightF
     
 }
 
+async function makeWorkout(workoutName,workoutType,workoutDate,workoutTime,workoutDuration,workoutNotes, workoutSets, workoutReps, workoutWeights) {
+    const a = await createWorkout(workoutName,workoutType,workoutDate,workoutTime,workoutDuration,workoutNotes, workoutSets, workoutReps, workoutWeights);
+    return true;
+}
+
 // WORKOUT FUNCTIONS
     let min_sets = 1;
     let max_sets = 30;
@@ -98,4 +103,4 @@ async function makeUser(email, password, retypedPassword, age,bodyweight,heightF
 
 
  
-module.exports = {registerUser, loginUser,personalInformationInput,makeUser,checkWorkoutMax};
+module.exports = {registerUser, loginUser,personalInformationInput,makeUser,checkWorkoutMax,makeWorkout};

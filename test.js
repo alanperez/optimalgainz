@@ -1,5 +1,5 @@
-const { authenticate } = require('./firestoreController');
-const {loginUser,registerUser,personalInformationInput, makeUser, checkWorkoutMax} = require('./functions');
+const { authenticate, createWorkout } = require('./firestoreController');
+const {loginUser,registerUser,personalInformationInput, makeUser, checkWorkoutMax, makeWorkout} = require('./functions');
 
 test('1 - registering valid usesr', () => {
     email = "abrarzaman2003@gmail.com";
@@ -7,6 +7,12 @@ test('1 - registering valid usesr', () => {
     retypedPassword = "P@ssword123";
   expect(registerUser(email, password, retypedPassword)).toBe("Account Generated");
 });
+// test('2 - registering valid usesr', () => {
+//   email = "test@mail.com";
+//   password = "P@ssword123";
+//   retypedPassword = "P@ssword123";
+// expect(registerUser(email, password, retypedPassword)).toBe("Account Generated");
+// });
 
 test('attempting to register user with different inputted passwords', () =>{
     email = "abrarzaman2003@gmail.com";
@@ -76,6 +82,17 @@ test("creating a user", async () => {
     expect(data).toBe(true)
 })
 
+// test("creating a user", async () => {
+//   email = "test@mail.com";
+//   password = "P@ssword123";
+//   retypedPassword = "P@ssword123";
+//   age = 70;
+//   weight = 170;
+//   heightFt = 6;
+//   heightIn = 2;
+//   const data = await makeUser(email,password,retypedPassword,age,weight,heightFt,heightIn);
+//   expect(data).toBe(true)
+// })
 
 test("logging in a user", async () => {
     email = "abrarzaman2003@gmail.com";
@@ -114,4 +131,21 @@ test("attempting to enter invalid weights", () =>{
   reps = 30;
   sets = 5;
   expect(checkWorkoutMax(pounds, sets, reps)).toBe("invalid weights (lbs), must be between 1 and 600");
+})
+
+test("creating workout for user", async () => {
+  workoutName = "Overhead Press",
+  workoutType = "Compound Exercise",
+  workoutDate = "2022-11-11",
+  workoutTime = "12:00 P.M",
+  workoutDuration = "30min",
+  workoutNotes = "Keep a tight grip on the bar at all times, a tighter grip equates to more tension in the lower arms, upper back and chest."
+  workoutSets = 3, 
+  workoutReps = 8, 
+  workoutWeights = "135 lbs"
+  // workoutSets = ["8 reps", "300lbs", "3 sets"]
+  // const data = await createWorkout(workoutName,workoutType,workoutDate,workoutTime,workoutDuration,workoutNotes,workoutSets);
+
+  const data = await makeWorkout(workoutName,workoutType,workoutDate,workoutTime,workoutDuration,workoutNotes,workoutSets, workoutReps, workoutWeights);
+  expect(data).toBe(true)
 })

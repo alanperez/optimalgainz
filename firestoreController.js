@@ -52,7 +52,7 @@ const createObject = async (email,password,age,weight,heightFt, heightIn) =>{
     
 }
 
-const createWorkout = async (workoutName,workoutType,workoutDate,workoutTime,workoutDuration,workoutNotes) => 
+const createWorkout = async (workoutName,workoutType,workoutDate,workoutTime,workoutDuration,workoutNotes, workoutSets, workoutReps, workoutWeights) => 
 {
     const docRef = db.collection('users').doc(email).collection('workouts').doc(workoutName);
     await docRef.set({
@@ -61,7 +61,10 @@ const createWorkout = async (workoutName,workoutType,workoutDate,workoutTime,wor
         workoutDate: workoutDate,
         workoutTime: workoutTime,
         workoutDuration: workoutDuration,
-        workoutNotes: workoutNotes
+        workoutNotes: workoutNotes,
+        workoutSets: workoutSets,
+        workoutReps: workoutReps,
+        workoutWeights: workoutWeights
     })
     return ({
         workoutName: workoutName,
@@ -69,7 +72,10 @@ const createWorkout = async (workoutName,workoutType,workoutDate,workoutTime,wor
         workoutDate: workoutDate,
         workoutTime: workoutTime,
         workoutDuration: workoutDuration,
-        workoutNotes: workoutNotes
+        workoutNotes: workoutNotes,
+        workoutSets: workoutSets,
+        workoutReps: workoutReps,
+        workoutWeights: workoutWeights
     });
 }
 
