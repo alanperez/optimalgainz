@@ -1,5 +1,5 @@
 const { authenticate } = require('./firestoreController');
-const {loginUser,registerUser,personalInformationInput, makeUser} = require('./functions');
+const {loginUser,registerUser,personalInformationInput, makeUser, checkWorkoutMax} = require('./functions');
 
 test('1 - registering valid usesr', () => {
     email = "abrarzaman2003@gmail.com";
@@ -92,6 +92,26 @@ test("logging in a user with invalid password", async () => {
 })
 
 
+test("Workout input", () =>{
+  pounds = 25;
+  reps = 30;
+  sets = 5;
+  expect(checkWorkoutMax(pounds, sets, reps)).toBe("Workout Info Inputted");
+})
 
 
 
+test('attemping to enter workout(sets, reps, lbs)', () =>{
+  pounds = 25;
+  reps = 30;
+  sets = 5;
+  expect(checkWorkoutMax(pounds, sets, reps)).toBe("Workout Input information Successful");
+})
+
+test("attempting to enter invalid weights", () =>{
+
+  pounds = 999;
+  reps = 30;
+  sets = 5;
+  expect(checkWorkoutMax(pounds, sets, reps)).toBe("invalid weights (lbs), must be between 1 and 600");
+})

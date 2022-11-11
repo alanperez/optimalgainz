@@ -1,5 +1,5 @@
 //const app = require('./index');
-const {authenticate, createObject} = require('./firestoreController');
+const {authenticate, createObject, createWorkout} = require('./firestoreController');
 
 function registerUser(email, password, retypedPassword) {
     if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)))
@@ -54,5 +54,41 @@ async function makeUser(email, password, retypedPassword, age,bodyweight,heightF
     
 }
 
+// WORKOUT FUNCTIONS
+    let min_sets = 1;
+    let max_sets = 30;
+    let min_reps = 1;
+    let max_reps = 40;
+    let min_lbs = 1;
+    let max_lbs = 600;
+
+
+
+    async function checkWorkoutMax(pounds, sets, reps){
+        if (pounds >= min_lbs  && pounds <= max_lbs && sets >= min_sets && sets <= max_sets &&
+            reps >= min_reps && reps <= max_reps){
+            return "Workout Input information Successful";
+        }
+        if (sets < min_sets || sets > max_sets){
+            return "invalid sets, must be between 1 and 30";
+        }
+    
+        if (pounds < min_lbs || pounds > max_lbs){
+            return "invalid weights (lbs), must be between 1 and 600";
+        }
+    
+        if (reps < min_reps || reps > max_reps){
+            return "invalid reps, must be between 1 and 40";
+        }
+    
+        return ("Workout Info Inputted")
+    }
+
+
+
+
+
+
+
  
-module.exports = {registerUser, loginUser, personalInformationInput,makeUser};
+module.exports = {registerUser, loginUser,personalInformationInput,makeUser,checkWorkoutMax};

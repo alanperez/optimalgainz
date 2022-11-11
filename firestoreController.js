@@ -52,7 +52,47 @@ const createObject = async (email,password,age,weight,heightFt, heightIn) =>{
     
 }
 
-module.exports = {authenticate,createObject};
+const createWorkout = async (workoutName,workoutType,workoutDate,workoutTime,workoutDuration,workoutNotes) => 
+{
+    const docRef = db.collection('users').doc(email).collection('workouts').doc(workoutName);
+    await docRef.set({
+        workoutName: workoutName,
+        workoutType: workoutType,
+        workoutDate: workoutDate,
+        workoutTime: workoutTime,
+        workoutDuration: workoutDuration,
+        workoutNotes: workoutNotes
+    })
+    return ({
+        workoutName: workoutName,
+        workoutType: workoutType,
+        workoutDate: workoutDate,
+        workoutTime: workoutTime,
+        workoutDuration: workoutDuration,
+        workoutNotes: workoutNotes
+    });
+}
+
+
+// const saveWorkoutObject = async (sets, reps, weight) => {
+
+//     const docRef = db.collection('users').doc(email);
+
+//     await docRef.set({
+//         sets: sets,
+//         reps: reps,
+//         weight: weight
+//     })
+
+//     return ({
+//         sets: sets,
+//         reps: reps,
+//         weight: weight
+//     });
+
+// }
+
+module.exports = {authenticate,createObject, createWorkout};
 
 
 
