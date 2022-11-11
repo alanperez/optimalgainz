@@ -134,15 +134,15 @@ test("attempting to enter invalid weights", () =>{
 })
 
 test("creating workout for user", async () => {
-  workoutName = "Overhead Press",
+  workoutName = "Dumbell Bench Press",
   workoutType = "Compound Exercise",
   workoutDate = "2022-11-11",
-  workoutTime = "12:00 P.M",
+  workoutTime = "1:00 P.M",
   workoutDuration = "30min",
   workoutNotes = "Keep a tight grip on the bar at all times, a tighter grip equates to more tension in the lower arms, upper back and chest."
   workoutSets = 3, 
   workoutReps = 8, 
-  workoutWeights = "135 lbs"
+  workoutWeights = "40 lbs"
   // workoutSets = ["8 reps", "300lbs", "3 sets"]
   // const data = await createWorkout(workoutName,workoutType,workoutDate,workoutTime,workoutDuration,workoutNotes,workoutSets);
 
