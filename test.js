@@ -132,7 +132,7 @@ test("attempting to enter invalid weights", () =>{
   sets = 5;
   expect(checkWorkoutMax(pounds, sets, reps)).toBe("invalid weights (lbs), must be between 1 and 600");
 })
-
+// Once ran, creates a subcollection wtihin the user collection
 test("creating workout for user", async () => {
   workoutName = "Dumbell Bench Press",
   workoutType = "Compound Exercise",
