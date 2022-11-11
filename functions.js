@@ -64,27 +64,34 @@ async function makeUser(email, password, retypedPassword, age,bodyweight,heightF
 
 
 
-    async function checkWorkoutMax(pounds, sets, reps){
-        if (pounds >= min_lbs  && pounds <= max_lbs && sets >= min_sets && sets <= max_sets &&
-            reps >= min_reps && reps <= max_reps){
-            return "Workout Input information Successful";
-        }
-        if (sets < min_sets || sets > max_sets){
+    function checkWorkoutMax(pounds, sets, reps){
+        // if (pounds >= 1  && pounds <= 600 && sets >= 1 && sets <= 30 &&
+        //     reps >= 5 && reps <= 40){
+        //     return "Workout Input information Successful";
+        // }
+        if (sets < 1 || sets > 30){
             return "invalid sets, must be between 1 and 30";
         }
     
-        if (pounds < min_lbs || pounds > max_lbs){
+        if (pounds < 1 || pounds > 600){
             return "invalid weights (lbs), must be between 1 and 600";
         }
     
-        if (reps < min_reps || reps > max_reps){
+        if (reps < 5 || reps > 40){
             return "invalid reps, must be between 1 and 40";
         }
     
-        return ("Workout Info Inputted")
+        return ("Workout Input information Successful")
     }
 
-
+// async function checkWorkoutMax(pounds, sets, reps){
+//     if(pounds >= min_lbs  && pounds <= max_lbs && sets >= min_sets && sets <= max_sets &&
+//     reps >= min_reps && reps <= max_reps){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
 
 
 

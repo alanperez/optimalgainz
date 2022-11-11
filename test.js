@@ -96,7 +96,7 @@ test("Workout input", () =>{
   pounds = 25;
   reps = 30;
   sets = 5;
-  expect(checkWorkoutMax(pounds, sets, reps)).toBe("Workout Info Inputted");
+  expect(checkWorkoutMax(pounds, sets, reps)).toBe("Workout Input information Successful");
 })
 
 
